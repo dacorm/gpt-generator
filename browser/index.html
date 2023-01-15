@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Generator | Markov Chains 🔗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Text Generator 🔗</h1>
+    <p>Generates a random yet syntactically plausible-ish and meaningful-ish text using Markov chains and a bit of luck. Sometimes outputs “wise thoughts”&trade;</p>
+
+    <h2>Try Yourself! 👨‍💻</h2>
+    <p>Upload a .txt file with a text that will be used as the source for word generation. The more words the text contains the better, more than 100k is perfect :–)</p>
+
+    <form id="form">
+      <label>
+        <span>How many words to generate:</span>
+        <input type="number" name="wordsCount" value="500" min="100" max="50000" step="100">
+      </label>
+      <label>
+        <span>How many previous words to use to generate the next one:</span>
+        <input type="number" name="sampleSize" value="6" min="2" max="15" step="1">
+      </label>
+      <label class="row">
+        <span>Source text:</span>
+        <input type="file" name="source" accept="txt" required>
+      </label>
+      <button>Generate</button>
+    </form>
+
+    <div class="result" id="result" contenteditable></div>
+  </div>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
