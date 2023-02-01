@@ -6,8 +6,8 @@ const sourcePath = path.resolve(process.cwd(), "cli/example.txt");
 const source = readFileSync(sourcePath);
 
 const result = generate({
-  wordsCount: 300,
-  sampleSize: 6,
+  wordsCount: 150,
+  sampleSize: 10,
   source,
 });
 
